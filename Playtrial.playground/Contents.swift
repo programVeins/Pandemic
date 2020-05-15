@@ -23,7 +23,7 @@ audioPlayer.setVolume(1.0, fadeDuration: 10.0)
 audioPlayer.numberOfLoops = -1
 
 PlaygroundPage.current.needsIndefiniteExecution = true
-PlaygroundPage.current.liveView = launchView
+PlaygroundPage.current.liveView = gameView(scene: UIView())
 
 
 

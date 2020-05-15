@@ -19,7 +19,7 @@ let a = UIButton()
 audioPlayer.prepareToPlay()
 audioPlayer.play()
 audioPlayer.setVolume(0.0, fadeDuration: 2.0)
-audioPlayer.setVolume(1.0, fadeDuration: 10.0)
+audioPlayer.setVolume(0.0, fadeDuration: 10.0)
 audioPlayer.numberOfLoops = -1
 
 PlaygroundPage.current.needsIndefiniteExecution = true

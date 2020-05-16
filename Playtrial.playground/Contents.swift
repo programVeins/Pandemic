@@ -4,7 +4,6 @@ import UIKit
 import PlaygroundSupport
 import AVFoundation
 
-var launchView = masterView()
 var audioPlayer = AVAudioPlayer()
 let loop = Bundle.main.path(forResource: "loop", ofType: "wav")
 
@@ -23,8 +22,7 @@ audioPlayer.setVolume(0.0, fadeDuration: 10.0)
 audioPlayer.numberOfLoops = -1
 
 PlaygroundPage.current.needsIndefiniteExecution = true
-PlaygroundPage.current.liveView = gameView(scene: UIView())
 
-
+PlaygroundPage.current.liveView = gameView()
 
 

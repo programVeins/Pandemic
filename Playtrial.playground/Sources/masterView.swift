@@ -8,6 +8,7 @@ public class masterView : UIView {
     let mViewHeight = 400
     let startBtn = UIButton()
     let mainText = UILabel()
+    let bgCol = UIColor(red: 20.0/256.0, green: 20.0/256.0, blue: 20.0/256.0, alpha: 1.0)
     
     public init(){
         super.init(frame:CGRect(x:0,y:0,width:mViewWidth,height:mViewHeight))
@@ -20,7 +21,7 @@ public class masterView : UIView {
     
     func render() {
         self.frame = CGRect(x:0,y:0,width:mViewWidth,height:mViewHeight)
-        self.backgroundColor = .black
+        self.backgroundColor = bgCol
         
         //Button Properties
         startBtn.frame = CGRect(x: 5*self.mViewWidth/12, y: 8*mViewHeight/12, width: 2*mViewWidth/12, height: 1*mViewHeight/12)
@@ -61,22 +62,26 @@ public class masterView : UIView {
         DispatchQueue.main.asyncAfter(deadline: .now() + 10.0){
             self.mainText.fadeOut()
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 12.0){
             self.mainText.text = "Do you have it in you to escape\nthe Virus' deadly clutches?"
             self.mainText.numberOfLines = 2
             self.mainText.fadeIn()
             self.addSubview(self.startBtn)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 14.0){
             self.startBtn.fadeIn()
         }
     
     }
     
     @objc func startGame(sender: UIButton!){
-        self.removeFromSuperview()
-        let game = gameView(scene: self)
-        PlaygroundPage.current.liveView = game
+        
+            self.startBtn.fadeOut()
+            self.mainText.fadeOut()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.removeFromSuperview()
+            PlaygroundPage.current.liveView = gameView()
+        }
     }
 }
 

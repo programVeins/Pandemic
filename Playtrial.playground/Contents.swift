@@ -24,10 +24,13 @@ catch {
 // Audio Properties
 audioPlayer.prepareToPlay()
 audioPlayer.play()
-audioPlayer.volume = 0.0
-audioPlayer.setVolume(1.0, fadeDuration: 10.0)
+audioPlayer.volume = 0.5
+DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+    audioPlayer.setVolume(1.0, fadeDuration: 5.0)
+}
 audioPlayer.numberOfLoops = -1
 
+// LiveView
 PlaygroundPage.current.needsIndefiniteExecution = true
 PlaygroundPage.current.liveView = introView(ap: audioPlayer)
 

@@ -2,16 +2,15 @@ import UIKit
 import PlaygroundSupport
 
 
-public class masterView : UIView {
+public class introView: UIView {
     
-    let mViewWidth = 700
-    let mViewHeight = 400
+    let mSize = CGSize(width: 700, height: 400)
     let startBtn = UIButton()
     let mainText = UILabel()
     let bgCol = UIColor(red: 20.0/256.0, green: 20.0/256.0, blue: 20.0/256.0, alpha: 1.0)
     
     public init(){
-        super.init(frame:CGRect(x:0,y:0,width:mViewWidth,height:mViewHeight))
+        super.init(frame:CGRect(x:0,y:0,width:mSize.width,height:mSize.height))
         render()
     }
     
@@ -20,11 +19,11 @@ public class masterView : UIView {
     }
     
     func render() {
-        self.frame = CGRect(x:0,y:0,width:mViewWidth,height:mViewHeight)
+        self.frame = CGRect(x:0,y:0,width:mSize.width,height:mSize.height)
         self.backgroundColor = bgCol
         
         //Button Properties
-        startBtn.frame = CGRect(x: 5*self.mViewWidth/12, y: 8*mViewHeight/12, width: 2*mViewWidth/12, height: 1*mViewHeight/12)
+        startBtn.frame = CGRect(x: 5*self.mSize.width/12, y: 8*mSize.height/12, width: 2*mSize.width/12, height: 1*mSize.height/12)
         startBtn.backgroundColor = .white
         startBtn.layer.cornerRadius = 15
         startBtn.setTitle("Let's Go", for: .normal)
@@ -34,7 +33,7 @@ public class masterView : UIView {
         startBtn.addTarget(self, action: #selector(startGame), for: .touchUpInside)
         
         //Text Properties
-        mainText.frame = CGRect(x: mViewWidth/4, y: mViewHeight/4, width: mViewWidth/2, height: mViewHeight/2)
+        mainText.frame = CGRect(x: mSize.width/4, y: mSize.height/4, width: mSize.width/2, height: mSize.height/2)
         mainText.text = "Hello"
         mainText.textColor = .white
         mainText.textAlignment = .center

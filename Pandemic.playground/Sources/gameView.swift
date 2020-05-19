@@ -655,14 +655,14 @@ public class gameView: UIView {
         t1.text = "Yes, we get that your iPhone is neccessary.\nBut really? Now?"
         self.addSubview(tintV)
         flag = 1
-        IQ -= 10
+        IQ -= 15
     }
     @objc func umbrellaFunc() {
         wrongClick()
         t1.text = "It is literally the middle of a pandemic now. What good is an umbrella during these troubled times?"
         self.addSubview(tintV)
         flag = 1
-        IQ -= 15
+        IQ -= 20
     }
     
     // Lvl 2
@@ -679,14 +679,14 @@ public class gameView: UIView {
         t1.text = "STRICT NO! Public articles might be contaminated. Think harder!"
         self.addSubview(tintV)
         flag = 2
-        IQ -= 25
+        IQ -= 40
     }
     @objc func steeringFunc() {
         wrongClick()
         t1.text = "Hands on the steering wheel would be COOL! ...if you're a driver. WHICH YOU ARE NOT!"
         self.addSubview(tintV)
         flag = 2
-        IQ -= 15
+        IQ -= 25
     }
     
     // Lvl 3
@@ -713,15 +713,15 @@ public class gameView: UIView {
         t1.text = "Cash? Why? Why now? Cash requires physical contact = chance of spread of infection."
         self.addSubview(tintV)
         flag = 4
-        IQ -= 30
+        IQ -= 35
     }
     @objc func phonepayFunc() {
         correctClick()
         goBtn.setTitle("Get out!", for: .normal)
-        t1.text = "You use Apple pay! Best move! There's no contact whatsover and the transaction is seemless :)"
+        t1.text = "You use Apple pay! Best move! There's no contact whatsover and the transaction is seamless :)"
         self.addSubview(tintV)
         flag = 0
-        IQ += 10
+        IQ += 15
     }
     
     // Lvl 5
@@ -746,7 +746,7 @@ public class gameView: UIView {
         t1.text = "You need not pick up a fight!\n1) There will be physical contact.\n2) Violence is bad"
         self.addSubview(tintV)
         flag = 5
-        IQ -= 20
+        IQ -= 40
     }
     
     // Lvl 6
@@ -755,7 +755,7 @@ public class gameView: UIView {
         t1.text = "Are you crazy! You CANNOT do that, sneezing/coughing out loud spreads the infection!"
         self.addSubview(tintV)
         flag = 6
-        IQ -= 70
+        IQ -= 60
     }
     @objc func handsFunc() {
         correctClick()

@@ -62,7 +62,7 @@ public class outroView: UIView {
                             self.mainText.fadeOut()
                             
                             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
-                                self.mainText.text = "By Following healthy practices and maintaing social distance, we can prevent a \'Post-Apocalyptic world\'"
+                                self.mainText.text = "By following healthy practices and maintaing social distance, we can prevent a \'Post-Apocalyptic world\'"
                                 self.mainText.fadeIn()
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 3.0){
@@ -79,11 +79,15 @@ public class outroView: UIView {
                                                 self.mainText.text = "Pandemic.\nA WWDC20 Submission devloped with ❤️ by Sabesh Bharathi"
                                                 self.mainText.fadeIn()
                                                 self.audioPlayer.setVolume(0.0, fadeDuration: 15.0)
-                                                DispatchQueue.main.asyncAfter(deadline: .now() + 15.0) {
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
                                                     
-                                                    // Stop Audio. Fin :)
                                                     self.mainText.fadeOut(duration: 5.0)
-                                                    self.audioPlayer.stop()
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                                                        
+                                                        // Stop Audio. Fin :)
+                                                        self.audioPlayer.stop()
+                                                    }
+                                                    
                                                 }
                                                 
                                             }

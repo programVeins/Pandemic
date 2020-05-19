@@ -1,3 +1,9 @@
-# WWDC 2020 Submission (Name TBD)
-## Made by Sabesh Bharathi
+# Pandemic
+ ---
+### pan·​dem·​ic
+*noun*
+~ an outbreak of a disease that occurs over a wide geographic area and affects an exceptionally high proportion of the population : a pandemic outbreak of a disease
 
+
+
+A WWDC20 Submission devloped with ❤️ by Sabesh Bharathi
